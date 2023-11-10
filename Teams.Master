@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teams.Master.cs" Inherits="labexw2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="TeamsDesign.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 434px;
+        }
+        .auto-style3 {
+            position: center;
+            width: 1499px;
+        }
+        .auto-style4 {
+            width: 931px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Image ID="imgTeamsLogo" runat="server" ImageUrl="~/TeamsImages/Teamslogo.png" ImageAlign="AbsMiddle"/>
+                    </td>
+                    <td>
+                        <h1 class="auto-style1">Teams' Games Store</h1>
+                    </td>
+                    <td style="text-align:right; padding-right:10px;" class="auto-style4">
+                        <asp:Label ID="lblInfo" runat="server" Text="Guest" ></asp:Label><br />
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" Height="25px" Width="45px" />
+                    </td>
+                    <td>
+                        <asp:Image ID="imgUser" runat="server" ImageUrl="~/TeamsImages/Userdefault.png" Hegith="45px" Width="45px"/>
+                    </td>
+                </tr>
+                </table>
+            <table>
+                <tr style="background-color: rgb(113, 182, 252);">
+                    <td class="auto-style3">
+                        <a href="testing.aspx">Test</a>
+                        <a href="testing.aspx">Test</a>
+                        <a href="testing.aspx">Test</a>
+                        <a href="testing.aspx">Test</a>
+                        <a href="testing.aspx">Test</a>
+                        <a href="testing.aspx">Test</a>
+                    </td>
+                </tr>
+                    <tr>
+                        <td>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+                        </td>
+                        </tr>
+                <tr style="background-color: rgb(113, 182, 252);">
+                    <td>
+                        <p style="text-align:right; color:rgb(0, 14, 110);" >&copy; 2023 Teams Corporation. All rights reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
