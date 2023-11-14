@@ -42,7 +42,7 @@
                 </tr>
                 </table>
             <table>
-                <tr style="background-color: rgb(113, 182, 252);">
+                <tr style="background-color: rgb(113, 182, 252); text-align:center;">
                     <td class="auto-style3">
                         <a href="testing.aspx">Test</a>
                         <a href="testing.aspx">Test</a>
