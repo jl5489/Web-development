@@ -1,4 +1,6 @@
 <%@ Page Language="C#" MasterPageFile="~/Teams.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="groupassignment.home" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -30,9 +32,8 @@
                     <asp:ImageButton ID="imgArrow10" runat="server" ImageUrl="~/Picture/arrow.jpeg" Height="181px" Width="109px" ImageAlign="AbsMiddle" CommandName="SwitchViewByIndex" CommandArgument="0" />
                 </asp:View>
             </asp:MultiView>
-            <br />
-            BROWSE BY CATEGORY:
-            <br />
+
+
             <asp:ImageButton ID="imbCatelistAdv" runat="server" ImageUrl="~/TeamsImages/Adventure.png" ImageAlign="AbsMiddle" Width="250" Height="250"/>
              <asp:ImageButton ID="imbCatelistHorror" runat="server" ImageUrl="~/TeamsImages/Horror.png" ImageAlign="AbsMiddle" Width="250" Height="250"/>
              <asp:ImageButton ID="imbCatelistSimu" runat="server" ImageUrl="~/TeamsImages/Simulative.png" ImageAlign="AbsMiddle" Width="250" Height="250"/>
@@ -41,6 +42,4 @@
 
         </div>
 </asp:Content>
-
-
 
