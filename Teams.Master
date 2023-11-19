@@ -1,4 +1,7 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teams.Master.cs" Inherits="labexw2.Site1" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teams.master.cs" Inherits="groupassignment.Teams" %>
+
+<%@ Register Src="~/Catecontrol.ascx" TagPrefix="uc1" TagName="Catecontrol" %>
+
 
 <!DOCTYPE html>
 
@@ -44,6 +47,7 @@
             <table>
                 <tr style="background-color: rgb(113, 182, 252); text-align:center;">
                     <td class="auto-style3">
+
                         <a href="testing.aspx">Test</a>
                         <a href="testing.aspx">Test</a>
                         <a href="testing.aspx">Test</a>
@@ -52,7 +56,14 @@
                         <a href="testing.aspx">Test</a>
                     </td>
                 </tr>
-                    <tr>
+                <tr style="background-color: rgb(113, 182, 252); text-align:center;">
+                    <td>
+                        <nav>
+                            <uc1:Catecontrol runat="server" ID="Catecontrol" />
+                        </nav>
+                    </td>
+                </tr>
+                <tr>
                         <td>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
