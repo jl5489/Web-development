@@ -11,7 +11,12 @@ namespace labexw2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            HttpCookie cookie = Request.Cookies["cookie"];
+            if (cookie != null)
+            {
+                //assign cookie values to the labels
+                lblInfo.Text = cookie["Username"];
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
