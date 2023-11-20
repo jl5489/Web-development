@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Assignment
+namespace labexw2
 {
     public partial class login : System.Web.UI.Page
     {
@@ -36,7 +36,7 @@ namespace Assignment
                 {
                     while (rdr.Read())
                     {
-                        //Session["UserName"] = rdr["username"].ToString();
+                        Session["UserName"] = rdr["Username"].ToString();
                         int userRole = Convert.ToInt16(rdr["isAdmin"].ToString());
 
                         switch (userRole)
@@ -63,6 +63,11 @@ namespace Assignment
             {
                 Response.Write(ex.ToString());
             }
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Gamedetail.aspx");
         }
     }
 }

@@ -1,7 +1,6 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teams.master.cs" Inherits="groupassignment.Teams" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teams.Master.cs" Inherits="labexw2.Site1" %>
 
 <%@ Register Src="~/Catecontrol.ascx" TagPrefix="uc1" TagName="Catecontrol" %>
-
 
 <!DOCTYPE html>
 
@@ -30,30 +29,24 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Image ID="imgTeamsLogo" runat="server" ImageUrl="~/TeamsImages/Teamslogo.png" ImageAlign="AbsMiddle"/>
+                        <asp:Image ID="imgTeamsLogo" runat="server" ImageUrl="~/images/TeamsImage/Teamslogo.png" ImageAlign="AbsMiddle"/>
                     </td>
                     <td>
                         <h1 class="auto-style1">Teams' Games Store</h1>
                     </td>
                     <td style="text-align:right; padding-right:10px;" class="auto-style4">
                         <asp:Label ID="lblInfo" runat="server" Text="Guest" ></asp:Label><br />
-                        <asp:Button ID="btnLogin" runat="server" Text="Login" Height="25px" Width="45px" />
+                        <asp:Button ID="btnLogin" runat="server" Text="Login" Height="25px" Width="45px" OnClick="btnLogin_Click"/>
                     </td>
                     <td>
-                        <asp:Image ID="imgUser" runat="server" ImageUrl="~/TeamsImages/Userdefault.png" Hegith="45px" Width="45px"/>
+                        <asp:Image ID="imgUser" runat="server" ImageUrl="~/images/TeamsImage/Userdefault.png" Hegith="45px" Width="45px"/>
                     </td>
                 </tr>
                 </table>
             <table>
-                <tr style="background-color: rgb(113, 182, 252); text-align:center;">
+                <tr style="background-color: rgb(113, 182, 252);">
                     <td class="auto-style3">
-
-                        <a href="testing.aspx">Test</a>
-                        <a href="testing.aspx">Test</a>
-                        <a href="testing.aspx">Test</a>
-                        <a href="testing.aspx">Test</a>
-                        <a href="testing.aspx">Test</a>
-                        <a href="testing.aspx">Test</a>
+                        <a href="Gamedetail.aspx">Home Page</a>
                     </td>
                 </tr>
                 <tr style="background-color: rgb(113, 182, 252); text-align:center;">
@@ -63,7 +56,7 @@
                         </nav>
                     </td>
                 </tr>
-                <tr>
+                    <tr>
                         <td>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 

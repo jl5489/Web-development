@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="Assignment.register" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="labexw2.register" %>
 
 <!DOCTYPE html>
 
@@ -40,18 +40,19 @@
                         <asp:TextBox ID="txtName" runat="server" Width="273px" />
                     </td>
                     <td class="auto-style5">
-                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator> 
-
+                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator> 
+                        <asp:RegularExpressionValidator ID="revName" runat="server" ControlToValidate="txtName" ValidationExpression="[a-zA-Z ]*$" Display="Dynamic" ForeColor="Red" ErrorMessage="Alphabets and spaces only."></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style1"></td>
-                    <td class="auto-style7">Identity Card Number: </td>
+                    <td class="auto-style7">Malaysian Identity Card Number: </td>
                     <td class="auto-style8">
                         <asp:TextBox ID="txtIc" runat="server" Width="273px" />
                     </td>
                     <td class="auto-style5">
-                        <asp:RequiredFieldValidator ID="rfvIc" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtIc" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvIc" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtIc" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revIc" runat="server" ControlToValidate="txtIc" ValidationExpression="\d{6}\-\d{2}\-\d{4}" ForeColor="Red" BackColor="Yellow" Display="Dynamic" ErrorMessage="Must follow this pattern xxxxxx-xx-xxxx"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -61,8 +62,8 @@
                         <asp:TextBox ID="txtPhone" runat="server" Width="273px" />
                     </td>
                     <td class="auto-style5">
-                        <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtPhone" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Phone number format must be: xxx-xxxxxxx!" ControlToValidate="txtPhone" ForeColor="Red" Display="Dynamic" ValidationExpression="^(\+?6?01)[0-46-9]-*[0-9]{7,8}$" BackColor="Yellow"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtPhone" ForeColor="Red" Display="Dynamic" ></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revPhone" runat="server" ErrorMessage="Phone number format must be: xxx-xxxxxxx!" ControlToValidate="txtPhone" ForeColor="Red" Display="Dynamic" ValidationExpression="^(\+?6?01)[0-46-9]-*[0-9]{7,8}$" ></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -82,7 +83,8 @@
                         <asp:TextBox ID="txtUname" runat="server" Width="273px" />
                     </td>
                     <td class="auto-style5">
-                        <asp:RequiredFieldValidator ID="rfvUname" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtUname" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvUname" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtUname" ForeColor="Red" Display="Dynamic" ></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revUname" runat="server" ControlToValidate="txtUname" ValidationExpression="[a-zA-Z]*$" ForeColor="Red" Display="Dynamic" ErrorMessage="Alphabets only. No space allowed"></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -92,7 +94,8 @@
                         <asp:TextBox ID="txtPwd" runat="server" Width="273px" />
                     </td>
                     <td class="auto-style5">
-                        <asp:RequiredFieldValidator ID="rfvPwd" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtPwd" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvPwd" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtPwd" ForeColor="Red" Display="Dynamic" ></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revPwd" runat="server" ControlToValidate="txtPwd" ValidationExpression="[a-zA-Z0-9]*$" ForeColor="Red" Display="Dynamic" ErrorMessage="Alphabets and numbers only."></asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
@@ -102,24 +105,31 @@
                         <asp:TextBox ID="txtCpwd" runat="server" Width="273px" />
                     </td>
                     <td class="auto-style5">
-                        <asp:RequiredFieldValidator ID="rfvCpwd" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtCpwd" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:CompareValidator ID="cpvPwd" runat="server" ErrorMessage="password must be the same" ControlToCompare="txtPwd" ControlToValidate="txtCpwd" BackColor="Yellow" ForeColor="Red"></asp:CompareValidator>
+                        <asp:RequiredFieldValidator ID="rfvCpwd" runat="server" ErrorMessage="This field must be fill in" ControlToValidate="txtCpwd" ForeColor="Red" Display="Dynamic" ></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revCpwd" runat="server" ControlToValidate="txtCPwd" ValidationExpression="[a-zA-Z0-9]*$" ForeColor="Red" Display="Dynamic" ErrorMessage="Alphabets and numbers only."></asp:RegularExpressionValidator>
+                        <asp:CompareValidator ID="cpvPwd" runat="server" ErrorMessage="password must be the same" ControlToCompare="txtPwd" ControlToValidate="txtCpwd" ForeColor="Red" Display="Dynamic" ></asp:CompareValidator>
                     </td>
+                </tr>
+                <%--<tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="auto-style4" colspan="2">
+                        <asp:CheckBox ID="cbxImage" runat="server" Text="Do you want to upload your profile picture?" AutoPostBack="true" OnCheckedChanged="cbxImage_CheckedChanged"/></td>
                 </tr>
                 <tr>
                     <td class="auto-style1"></td>
                     <td class="auto-style7">Profile picture: </td>
                     <td class="auto-style8">
-                        <%--<asp:FileUpload ID="fiuImage" runat="server" AllowMultiple="false" />--%>
-                        <asp:TextBox ID="txtImage" runat="server" Width="273px" />
+                        <asp:FileUpload ID="fiuImage" runat="server" accept="image/*" AllowMultiple="false" />
                     </td>
-                    <td class="auto-style5"></td>
-                </tr>
+                    <td class="auto-style5">
+                        <asp:Label ID="lblMessage" runat="server" ></asp:Label></td>
+                </tr>--%>
                 <tr>
                     <td class="auto-style1"></td>
                     <td class="auto-style7"></td>
                     <td class="auto-style4" colspan="2">
-                        <asp:CheckBox ID="cbxTerm" runat="server" text="click to express you agree our terms and condition" OnCheckedChanged="cbxTerm_CheckedChanged" AutoPostBack="true"/>
+                        <asp:CheckBox ID="cbxTerm" runat="server" text="Click to express you agreement on our terms and condition" OnCheckedChanged="cbxTerm_CheckedChanged" AutoPostBack="true"/>
                     </td>
                     
                 </tr>

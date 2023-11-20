@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Assignment
+namespace labexw2
 {
 
 
@@ -42,6 +42,15 @@ namespace Assignment
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
 
         /// <summary>
+        /// revName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revName;
+
+        /// <summary>
         /// txtIc control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvIc;
+
+        /// <summary>
+        /// revIc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revIc;
 
         /// <summary>
         /// txtPhone control.
@@ -123,6 +141,15 @@ namespace Assignment
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUname;
 
         /// <summary>
+        /// revUname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revUname;
+
+        /// <summary>
         /// txtPwd control.
         /// </summary>
         /// <remarks>
@@ -139,6 +166,15 @@ namespace Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPwd;
+
+        /// <summary>
+        /// revPwd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPwd;
 
         /// <summary>
         /// txtCpwd control.
@@ -159,6 +195,15 @@ namespace Assignment
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCpwd;
 
         /// <summary>
+        /// revCpwd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCpwd;
+
+        /// <summary>
         /// cpvPwd control.
         /// </summary>
         /// <remarks>
@@ -166,15 +211,6 @@ namespace Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator cpvPwd;
-
-        /// <summary>
-        /// txtImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImage;
 
         /// <summary>
         /// cbxTerm control.

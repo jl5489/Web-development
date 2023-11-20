@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Assignment.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="labexw2.login" %>
 
 <!DOCTYPE html>
 
@@ -49,7 +49,7 @@
                     <td class="auto-style4"></td>
                     <td class="auto-style1"></td>
                     <td class="auto-style2" >
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
                         &nbsp;&nbsp;
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
 
