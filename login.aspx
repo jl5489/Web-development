@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="labexw2.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Assignment.login"  %>
 
 <!DOCTYPE html>
 
@@ -32,7 +32,9 @@
             <br /><br /><br />
             <table style="color:white; " width="100%">
                 <tr>
-                    <td class="auto-style4"></td>
+                    <td class="auto-style4">
+                        <asp:Label ID="lblName" runat="server" Visible="false" />
+                    </td>
                     <td class="auto-style1"style="text-align:center">User Name: </td>
                     <td class="auto-style2">
                         <asp:TextBox ID="txtUname" runat="server" Width="302px" />
@@ -49,7 +51,7 @@
                     <td class="auto-style4"></td>
                     <td class="auto-style1"></td>
                     <td class="auto-style2" >
-                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
                         &nbsp;&nbsp;
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
 
