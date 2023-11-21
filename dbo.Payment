@@ -1,0 +1,9 @@
+CREATE TABLE [dbo].[Payment] (
+    [PaymentID] INT          NOT NULL,
+    [Username]  VARCHAR (20) NOT NULL,
+    [GameID]    VARCHAR (20) NOT NULL,
+    [Method]    VARCHAR (20) NOT NULL,
+    CONSTRAINT [PK_Payment] PRIMARY KEY CLUSTERED ([PaymentID] ASC),
+    CONSTRAINT [FK_Payment_User] FOREIGN KEY ([Username]) REFERENCES [dbo].[User] ([Username]) ON UPDATE CASCADE,
+    CONSTRAINT [FK_Payment_Games] FOREIGN KEY ([GameID]) REFERENCES [dbo].[Games] ([GameID])
+);
