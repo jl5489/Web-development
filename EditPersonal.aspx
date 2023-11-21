@@ -132,7 +132,7 @@
                     <asp:TableCell></asp:TableCell>
                     <asp:TableCell>
                         <asp:Button ID="btnVcancel" runat="server" Text="Cancel" OnClick="btnVcancel_Click" />
-                        <asp:Button ID="btnVerify" runat="server" Text="Verify" OnClick="btnVerify_Click"/>
+                        <asp:Button ID="btnVerify" runat="server" Text="Verify" ForeColor="Red" OnClick="btnVerify_Click"/>
                     </asp:TableCell>
                 </asp:TableRow>
             </asp:Table>
