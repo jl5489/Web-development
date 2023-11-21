@@ -5,6 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div>
+                        <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+                        <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click1"/>
+                        <asp:Label ID="lblResult" runat="server" ></asp:Label>
             <asp:MultiView ID="mvAdver" runat="server" ActiveViewIndex="0">
                 <asp:View ID="viewPicture1" runat="server">
                     <asp:ImageButton ID="imgArrow1" runat="server" ImageUrl="~/Picture/arrow2.jpeg" Height="181px" Width="109px" ImageAlign="AbsMiddle"  CommandArgument="viewPicture5" CommandName="SwitchViewByID"/>
