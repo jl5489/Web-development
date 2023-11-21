@@ -1,5 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -8,8 +10,11 @@ using System.Xml.Linq;
 
 namespace groupassignment
 {
+
     public partial class home : System.Web.UI.Page
     {
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["TeamsConnString"].ConnectionString);
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -68,10 +73,27 @@ namespace groupassignment
             Response.Redirect("~/Category.aspx?IDCAT=c3");
 
         }
-
-        protected void imbCatelistAc_Click(object sender, ImageClickEventArgs e)
+        protected void btnSearch_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Category.aspx?IDCAT=c1");
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM[Games] WHERE Name=@ganame", conn);
+            cmd.Parameters.AddWithValue("ganame", txtSearch.Text);
+            SqlDataReader dr = cmd.ExecuteReader();
+            bool recordfound = dr.Read();
+
+            if (recordfound)
+            {
+                String GaID = dr["GameID"].ToString();
+                Response.Redirect("~/Gamedetail.aspx?IDGa=GaID");
+            }
+            else
+            {
+
+                lblResult.Text = "No record found...";
+                lblResult.ForeColor = System.Drawing.Color.Red;
+
+            }
+            conn.Close();
         }
     }
 }
