@@ -24,7 +24,7 @@ namespace Assignment
 
         public int cookies()
         {
-            int i= 0;
+            int i = 0;
             conn.Open();
             SqlCommand com = new SqlCommand("SELECT * FROM [User] WHERE Username=@Uname", conn);
 
@@ -37,9 +37,10 @@ namespace Assignment
             }
             conn.Close();
 
-            HttpCookie cookie = new HttpCookie("Democookie");
+            HttpCookie cookie = new HttpCookie("cookie");
 
             cookie["name"] = lblName.Text;
+            cookie["Username"] = txtUname.Text;
 
             //write the cookies on the client machine
             Response.Cookies.Add(cookie);
@@ -52,7 +53,7 @@ namespace Assignment
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             try
-             {
+            {
                 cookies();
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM [User] WHERE  Username=@Uname AND Password = @pwd", conn);
@@ -63,24 +64,24 @@ namespace Assignment
 
                 if (rdr.HasRows)
                 {
-                    
+
                     while (rdr.Read())
                     {
                         //Session["UserName"] = rdr["username"].ToString();
                         int userRole = Convert.ToInt16(rdr["isAdmin"].ToString());
 
-                        
+
 
                         switch (userRole)
                         {
                             case 0:
-                                
-                                Response.Redirect("~/EditPersonal.aspx?Username="+txtUname.Text);
+
+                                Response.Redirect("~/home.aspx?Username=" + txtUname.Text);
                                 lblMessage.Text = "user";
-                                
+
                                 break;
                             case 1:
-                                //Response.Redirect("~/EditCategory.aspx?Username="+txtUname.Text");
+                                Response.Redirect("~/EditGames.aspx?Username="+txtUname.Text);
                                 lblMessage.Text = "admin";
                                 break;
 
@@ -88,7 +89,7 @@ namespace Assignment
 
                     }
                 }
-                
+
                 else
                 {
                     lblMessage.Text = "Username and / or password not found.";
@@ -100,7 +101,7 @@ namespace Assignment
                 Response.Write(ex.ToString());
             }
 
-            
+
         }
     }
 }
